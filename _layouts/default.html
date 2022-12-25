@@ -1,0 +1,38 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
+    {% if site.analytics-id %}
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
+      ga('create', '{{ site.analytics-id }}', 'auto');
+      ga('set', 'transport', 'beacon');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+    {% include _title.html %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="contact" data-encoded="{{site.data.contacts.email-encoded}}" data-key="{{site.data.contacts.email-key}}">
+    <meta name="description" content="{{ site.description }}">
+    <script type="application/ld+json">
+    {% if site.data.services.industry and site.data.services.area-served.caption %}
+    {% include _meta-ld-Service.html %}
+    {% else %}
+    {% include _meta-ld-LocalBusiness.html %}
+    {% endif %}
+    </script>
+    {% include _meta-og-business.html %}
+    {% asset style.css %}
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"></script>
+  </head>
+  <body>
+    {% include _nav.html %}
+    {{ content }}
+    {% asset main.js %}
+    {% include _footer.html %}
+  </body>
+</html>

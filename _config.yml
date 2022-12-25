@@ -14,13 +14,13 @@ logo: jekyll-logo.png
 analytics-id:
 opengraph:
   fb-appid:
-  fb-user: jekyll-business-sense
+  fb-user: # jekyll-business-sense
   image: # override site.logo (store in src/_assets/images)
 
-url: "https://jekyll-business-sense.burden.cc" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # https://jekyll-business-sense.burden.cc" here use the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 thanks: "/thanks" # after form submitted, send visitor here
-github: burden/jekyll-business-sense
+github: # burden/jekyll-business-sense
 
 # Build settings
 plugins:
@@ -28,8 +28,8 @@ plugins:
   - kramdown
   - uglifier
 
-source: src
-destination: www
+source: # src
+destination: # www
 markdown: kramdown
 
 compress_html:
@@ -56,8 +56,8 @@ assets:
     css: false
     js: uglifier
 
-include:
-  - CNAME
+# include:
+#   - CNAME
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

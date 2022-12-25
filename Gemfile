@@ -1,10 +1,14 @@
 source "https://rubygems.org"
 ruby RUBY_VERSION
+gem "bundler"
 gem "jekyll", "~> 3.8.5"
-# gem "rake"
+gem "rake"
+gem "webrick", "~> 1.7"
+
 # gem "html-proofer"
 # gem "nokogiri", ">= 1.8.5"
 # gem "rack", ">= 2.0.6"
+
 group :jekyll_plugins do
   gem "jekyll-assets"
   gem "kramdown"
